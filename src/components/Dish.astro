@@ -1,0 +1,34 @@
+---
+import { type Dish } from 'types';
+import ResponsiveImage from '@components/ResponsiveImage.astro';
+
+interface Props extends Dish {
+    class?: string;
+    'data-sb-field-path'?: string;
+}
+
+const { name, description, price, image, category, class: className, 'data-sb-field-path': fieldPath } = Astro.props;
+
+const categoryTitles = {
+    appetizer: 'Entrada',
+    mainCourse: 'Plato fuerte',
+    drink: 'Bebida',
+    dessert: 'Postre'
+};
+---
+
+<div class:list={['card card-border', className]} data-sb-field-path={fieldPath}>
+    {
+        image && image.src && (
+            <figure>
+                <ResponsiveImage _id={image._id} src={image.src} width={image.dimensions?.width} height={image.dimensions?.height} alt={image.alt} />
+            </figure>
+        )
+    }
+    <div class="card-body text-left gap-4">
+        <h3 class="card-title">{name}</h3>
+        {description && <p>{description}</p>}
+        {price && <p class="text-lg font-bold">${price}</p>}
+        {category && <div class="badge">{categoryTitles[category] || category}</div>}
+    </div>
+</div>

@@ -43,4 +43,14 @@ export const SECTIONS = `{
         }
     }
   },
+  _type == "menuSection" => {
+    dishes[]-> {
+      _id,
+      name,
+      description,
+      price,
+      category,
+      image ${IMAGE}
+    }
+  }
 }`;

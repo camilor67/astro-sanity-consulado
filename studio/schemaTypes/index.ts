@@ -7,6 +7,7 @@ import cardsSection from './cardsSection'
 import company from './company'
 import ctaSection from './ctaSection'
 import customImage from './customImage'
+import dish from './plate'
 import footer from './footer'
 import header from './header'
 import heroSection from './heroSection'
@@ -16,6 +17,8 @@ import person from './person'
 import siteConfig from './siteConfig'
 import testimonial from './testimonial'
 import testimonialsSection from './testimonialsSection'
+import menuSection from './menuSection'
+import location from './location'
 
 export const schemaTypes = [
   actionButton,
@@ -27,6 +30,7 @@ export const schemaTypes = [
   company,
   ctaSection,
   customImage,
+  dish,
   footer,
   header,
   heroSection,
@@ -36,4 +40,6 @@ export const schemaTypes = [
   siteConfig,
   testimonial,
   testimonialsSection,
+  menuSection,
+  location,
 ]

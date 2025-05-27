@@ -81,11 +81,27 @@ export interface LogosSection extends Section {
     motion?: 'static' | 'moveToLeft' | 'moveToRight';
 }
 
+export interface Dish {
+    _id: string;
+    name: string;
+    description?: string;
+    price?: number;
+    image?: CustomImage;
+    category?: 'appetizer' | 'mainCourse' | 'drink' | 'dessert';
+}
+
+export interface MenuSection extends Section {
+    heading?: string;
+    body?: string;
+    dishes?: Array<Dish>;
+    columns?: 'one' | 'two' | 'three';
+}
+
 export interface Page {
     _id: string;
     slug: Slug;
     title: string;
-    sections: Array<CardsSection | CtaSection | HeroSection | LogosSection | TestimonialsSection>;
+    sections: Array<CardsSection | CtaSection | HeroSection | LogosSection | TestimonialsSection | MenuSection>;
     metaTitle?: string;
     addTitleSuffix?: boolean;
     metaDescription?: string;
