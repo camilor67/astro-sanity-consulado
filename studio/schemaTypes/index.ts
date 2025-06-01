@@ -13,10 +13,7 @@ import header from './header'
 import heroSection from './heroSection'
 import logosSection from './logosSection'
 import page from './page'
-import person from './person'
 import siteConfig from './siteConfig'
-import testimonial from './testimonial'
-import testimonialsSection from './testimonialsSection'
 import menuSection from './menuSection'
 import location from './location'
 
@@ -36,10 +33,7 @@ export const schemaTypes = [
   heroSection,
   logosSection,
   page,
-  person,
   siteConfig,
-  testimonial,
-  testimonialsSection,
   menuSection,
   location,
 ]

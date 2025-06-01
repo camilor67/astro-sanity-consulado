@@ -87,7 +87,7 @@ export interface Dish {
     description?: string;
     price?: number;
     image?: CustomImage;
-    category?: 'appetizer' | 'mainCourse' | 'drink' | 'dessert';
+    category?: 'plato_principal' | 'comida_rapida' | 'burguers' | 'antojos' | 'bebidas' | 'snaks';
 }
 
 export interface MenuSection extends Section {
@@ -101,19 +101,11 @@ export interface Page {
     _id: string;
     slug: Slug;
     title: string;
-    sections: Array<CardsSection | CtaSection | HeroSection | LogosSection | TestimonialsSection | MenuSection>;
+    sections: Array<CardsSection | CtaSection | HeroSection | LogosSection | MenuSection>;
     metaTitle?: string;
     addTitleSuffix?: boolean;
     metaDescription?: string;
     socialImage?: CustomImage;
-}
-
-export interface Person {
-    _id: string;
-    name: string;
-    title?: string;
-    image?: CustomImage;
-    company?: Company;
 }
 
 export interface Section {
@@ -133,18 +125,4 @@ export interface SiteConfig {
 
 export interface Slug {
     current: string;
-}
-
-export interface Testimonial {
-    quote?: string;
-    author?: Person;
-    theme?: 'light' | 'dark' | 'transparent';
-    hasBorder?: boolean;
-}
-
-export interface TestimonialsSection extends Section {
-    heading?: string;
-    body?: string;
-    items?: Array<Testimonial>;
-    columns?: 'one' | 'two';
 }

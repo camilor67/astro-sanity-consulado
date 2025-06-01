@@ -25,24 +25,6 @@ export const SECTIONS = `{
   _type == "logosSection" => {
     items[] ${IMAGE}
   },
-  _type == "testimonialsSection" => {
-    items[] {
-        ...,
-        author-> {
-            _type,
-            _id,
-            name,
-            title,
-            image ${IMAGE},
-            company-> {
-                _type,
-                _id,
-                name,
-                logo ${IMAGE}
-            }
-        }
-    }
-  },
   _type == "menuSection" => {
     dishes[]-> {
       _id,

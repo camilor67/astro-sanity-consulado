@@ -46,13 +46,28 @@ export default defineType({
       type: 'string',
       options: {
         list: [
-          { title: 'Entrada', value: 'appetizer' },
-          { title: 'Plato fuerte', value: 'mainCourse' },
-          { title: 'Bebida', value: 'drink' },
-          { title: 'Postre', value: 'dessert' },
+          { title: 'Plato principal', value: 'plato_principal' },
+          { title: 'Comida rápida', value: 'comida_rapida' },
+          { title: 'Burguers', value: 'burguers' },
+          { title: 'Antojos', value: 'antojos' },
+          { title: 'Bebidas', value: 'bebidas' },
+          { title: 'Snaks', value: 'snaks' },
         ],
       },
       group: 'content',
+    }),
+    defineField({
+      name: 'subcategory',
+      title: 'Subcategoría',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Internacionales', value: 'internacionales' },
+          { title: 'Nacionales', value: 'nacionales' },
+          { title: 'Bebidas calientes', value: 'bebidas_calientes' }
+        ]
+      },
+      group: 'content'
     }),
   ],
   preview: {

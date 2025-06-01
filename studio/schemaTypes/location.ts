@@ -4,7 +4,7 @@ import { PinIcon } from '@sanity/icons'
 export default defineType({
   name: 'location',
   title: 'Ubicación',
-  type: 'document',
+  type: 'object',
   icon: PinIcon,
   groups: [
     {
@@ -30,14 +30,6 @@ export default defineType({
       type: 'text',
       group: 'content',
     }),
-    // defineField({
-    //   name: 'placeId',
-    //   title: 'ID del Lugar en Google',
-    //   description: 'El ID del lugar en Google Business. Puedes encontrarlo en la URL de tu perfil de Google Business.',
-    //   type: 'string',
-    //   validation: (Rule) => Rule.required(),
-    //   group: 'map',
-    // }),
     defineField({
       name: 'address',
       title: 'Dirección',

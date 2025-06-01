@@ -93,14 +93,16 @@ const dayNames = {
                 hours && hours.length > 0 && (
                     <div class="mt-4">
                         <h3 class="font-bold mb-2">Horario de Atención</h3>
-                        <div class="grid grid-cols-2 gap-2">
-                            {hours.map((schedule, idx) => (
-                                <div class="flex justify-between" data-sb-field-path={`.hours.${idx}`}>
-                                    <span class="font-medium">{dayNames[schedule.day]}</span>
-                                    <span>{schedule.hours}</span>
-                                </div>
-                            ))}
-                        </div>
+                        <table class="w-full text-left">
+                            <tbody>
+                                {hours.map((schedule, idx) => (
+                                    <tr data-sb-field-path={`.hours.${idx}`}>
+                                        <td class="py-1 font-medium">{dayNames[schedule.day]}</td>
+                                        <td class="py-1">{schedule.hours}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>
                 )
             }

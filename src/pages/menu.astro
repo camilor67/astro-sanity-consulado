@@ -1,0 +1,12 @@
+---
+import { getMenuDishes, getCategories } from '@data/menu';
+import MenuFilterIsland from '@components/MenuFilterIsland';
+import Layout from '@layouts/Layout.astro';
+
+const dishes = await getMenuDishes();
+const categories = await getCategories();
+---
+
+<Layout title="Menú">
+    <MenuFilterIsland client:load dishes={dishes} categories={categories} />
+</Layout>
